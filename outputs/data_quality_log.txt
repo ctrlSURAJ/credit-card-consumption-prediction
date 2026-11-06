@@ -1,0 +1,9 @@
+1. Found 1 demographic record(s) with placeholder '0' instead of a real category (IDs: [16199]). These fields will be imputed with the mode.
+
+2. Columns 'NetBanking_Flag' and 'Avg_days_between_transaction' were swapped relative to their content (the 'flag' column only ever held large day-count-like integers, and vice versa). Renamed to match actual content: netbanking_flag (0/1) <- old Avg_days_between_transaction, avg_days_between_transaction (integer) <- old NetBanking_Flag.
+
+3. 'region_code' is identical to 'Tenure_with_Bank' for 100% of records -> treated as a duplicated/corrupted column and dropped.
+
+4. 706 records have implausible age (>100, up to 223) and 256 have implausible Emp_Tenure_Years (>100, up to 203). Both show a clean gap between plausible and implausible values, so these are set to NaN and median-imputed.
+
+5. CustomerBehaviorData has 11 scattered null cells across various columns (<=2 per column, out of 20,000 rows) -> median-imputed for numeric columns; loan_enq nulls filled as 'N' (no enquiry, the majority class / the only alternative to 'Y').

@@ -1,0 +1,7 @@
+Model,Validation RMSPE
+Gradient Boosting (log target),0.2574312449057696
+XGBoost (log target),0.2576938473522362
+Random Forest (log target),0.2607493055843057
+XGBoost (raw target),0.2754130570648574
+Linear Regression (log target),0.4720637649144303
+Ridge Regression (log target),0.4720668072958041

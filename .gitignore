@@ -1,0 +1,10 @@
+# Raw bank data (provided by AnalytixLabs, not for redistribution)
+data/*.xlsx
+data/*.csv
+*.pdf
+
+# Generated artifacts
+outputs/*.pkl
+__pycache__/
+*.pyc
+.vscode/
